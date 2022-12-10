@@ -43,20 +43,55 @@ coffeeRoutes.route('/buy/:_type/:_amount').get(async function (_req, res) {
             'coffee': stock.coffee - cost.coffee*amount,
            'milk': stock.milk - cost.milk*amount,
             'cups': stock.cups - cost.cups*amount,
-            "money": stock.money + cost.money*amount
+            "money": stock.money + cost.money*amount,
 
         }},{});
     
-        return res.json({ 
-        'water': stock.water - cost.water*amount,
-        'coffee': stock.coffee - cost.coffee*amount,
-       'milk': stock.milk - cost.milk*amount,
-        'cups': stock.cups - cost.cups*amount,
-        "money": stock.money + cost.money*amount
-    })
+        return res.send("I give you "+amount+" "+coffeType);
 
 });
 
+coffeeRoutes.route('/take').get(async function (_req, res) {
+  const dbConnect = dbo.getDb();
+  const stock= await dbConnect
+    .collection('supplies')
+    .findOne({})
+    await dbConnect.collection('supplies').update({
+      _id: stock._id
+      },{
+        $set: {
+          "money": 0}
+      });
+
+    return res.send("I gave you $"+stock.money);
+  });
+  coffeeRoutes.route('/remaining').get(async function (_req, res) {
+    const dbConnect = dbo.getDb();
+    const stock= await dbConnect
+      .collection('supplies')
+      .findOne({})
+
+  
+      return res.send("The Coffee Machine has:\n"
+      +stock.water+" water\n"
+      +stock.milk+" milk\n"
+      +stock.coffee+" coffee\n"
+      +stock.cups+" cups\n"
+      +stock.money+" money");
+    });
+
+    coffeeRoutes.route('/fill/:_type/:_amount').get(async function (_req, res) {
+      const dbConnect = dbo.getDb();
+  const stock= await dbConnect
+    .collection('supplies')
+    .findOne({})
+    const type = _req.params._type;
+    const amount = _req.params._amount;
+  
+    
+        return res.send("Filling "+type+" for "+amount);
+
+      });
 
 
 module.exports = coffeeRoutes;
