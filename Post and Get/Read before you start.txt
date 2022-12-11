@@ -1,0 +1,40 @@
+===>
+
+NOT:Çalıştırma esnasında yaşanan bir hatadan veri tabanı sorumludur(bazen bağlanmama durumları oluyor).
+
+
+
+Log veritabanına yeni bir veri eklemek için >  
+
+===>.package.json'daki start kısmını "nodemon logging.js" yapınız
+ ===>POST localhost:5000/logs   yapıp verinizi json olarak gönderiniz
+
+Log veritabanını görmek için > 
+
+===>.package.json'daki start kısmını "nodemon logging.js" yapınız
+ ===>POST localhost:5000/getall/logs   yapınız
+
+
+Supplies(makinenin içindekiler) veritabanına yeni bir veri eklemek için >  
+
+===>.package.json'daki start kısmını "nodemon supplies.js" yapınız
+ ===>POST localhost:5000/posts   yapıp verinizi json olarak gönderiniz
+
+Supplies veritabanını görmek için > 
+
+===>.package.json'daki start kısmını "nodemon supplies.js" yapınız
+ ===>POST localhost:5000/getall/posts   yapınız
+
+
+Coffeecon(kahve türleri) veritabanına yeni bir veri eklemek için >  
+
+===>.package.json'daki start kısmını "nodemon coffeecon.js" yapınız
+ ===>POST localhost:5000/coffees   yapıp verinizi json olarak gönderiniz
+
+Coffeecon veritabanını görmek için > 
+
+===>.package.json'daki start kısmını "nodemon coffeecon.js" yapınız
+ ===>POST localhost:5000/getall/coffees   yapınız
+
+
+

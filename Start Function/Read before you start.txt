@@ -1,0 +1,15 @@
+NOT:Çalıştırma esnasında yaşanan bir hatadan veri tabanı sorumludur(bazen bağlanmama durumları oluyor).
+
+
+
+Start fonksiyonunu çalıştırmak için:
+
+=>GET localhost:5000/buy/type/amount
+örn: GET localhost:5000/buy/latte/1
+
+=>GET localhost:5000/take
+
+=>GET localhost:5000/remaining
+
+=>GET localhost:5000/fill/type/amount
+örn: GET localhost:5000/fill/water/100
