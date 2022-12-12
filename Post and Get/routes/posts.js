@@ -1,5 +1,5 @@
 const express=require('express');
-const Post =require('../modules/Post');
+const Post =require('../modules/Post.js');
 
 const router=express.Router();
 

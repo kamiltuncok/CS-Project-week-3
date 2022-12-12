@@ -12,7 +12,7 @@ Log veritabanına yeni bir veri eklemek için >
 Log veritabanını görmek için > 
 
 ===>.package.json'daki start kısmını "nodemon logging.js" yapınız
- ===>POST localhost:5000/getall/logs   yapınız
+ ===>POST localhost:5000/logs/getall   yapınız
 
 
 Supplies(makinenin içindekiler) veritabanına yeni bir veri eklemek için >  
@@ -23,7 +23,7 @@ Supplies(makinenin içindekiler) veritabanına yeni bir veri eklemek için >
 Supplies veritabanını görmek için > 
 
 ===>.package.json'daki start kısmını "nodemon supplies.js" yapınız
- ===>POST localhost:5000/getall/posts   yapınız
+ ===>POST localhost:5000/posts/getall   yapınız
 
 
 Coffeecon(kahve türleri) veritabanına yeni bir veri eklemek için >  
@@ -34,7 +34,7 @@ Coffeecon(kahve türleri) veritabanına yeni bir veri eklemek için >
 Coffeecon veritabanını görmek için > 
 
 ===>.package.json'daki start kısmını "nodemon coffeecon.js" yapınız
- ===>POST localhost:5000/getall/coffees   yapınız
+ ===>POST localhost:5000/coffees/getall   yapınız
 
 
 
